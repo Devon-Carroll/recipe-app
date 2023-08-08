@@ -1,23 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display+SC');
 
-/* Global styles */
-html {
-  font-family: 'helvetica neue', sans-serif;
-}
-
 .App {
   padding: 1em;
-}
-
-/* Header styles */
-header {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   font-family: 'Playfair Display SC';
   font-size: 64px;
   text-align: center;
+  
 }
 
 label {
@@ -25,27 +16,42 @@ label {
   width: 100px;
 }
 
-/* Table styles */
-table {
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: collapse;
-  overflow: hidden;
+header {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-thead th,
-tfoot th {
+/* typography */
+
+html {
+  font-family: 'helvetica neue', sans-serif;
+}
+
+thead th, tfoot th {
   font-family: 'Rock Salt';
+}
+
+th {
   letter-spacing: 2px;
   padding: 10px;
 }
 
 td {
   letter-spacing: 1px;
+  overflow-x:hidden;
+  overflow-y:hidden;
   font-size: 12px;
   padding: 10px;
   text-align: center;
+}
+
+/* table */
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  overflow:hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .content_td p {
@@ -55,27 +61,19 @@ td {
   text-overflow: ellipsis;
 }
 
-/* Form input styles */
-input[type=text],
-input[type=url] {
+/* Column Size for thead */
+tr:nth-child(odd) {
+  background-color: #fff0c7;
+}
+
+/* Column size for tbody */
+
+
+input[type=text] {
   width: 80%;
 }
 
-/* Mobile-specific styles */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 40px; /* Decrease font size for smaller screens */
-  }
-
-  label {
-    width: 80px; /* Adjust label width for smaller screens */
-  }
-
-  input[type=text],
-  input[type=url] {
-    width: 100%; /* Make inputs full width on mobile */
-  }
-
-  /* Add any other mobile-specific style adjustments here */
+input[type=url] {
+  width: 80%;
 }
 
